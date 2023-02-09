@@ -36,8 +36,12 @@ namespace PokedexApiXamarin.Views
             {
                 //contenido http serializado en un string
                 var respString = await response.Content.ReadAsStringAsync();
-                //Cachar lista de elemntos deserializados de la clase
+                //Cachar obj(lista) de elemntos deserializados de la clase
+                //tranformamos respString a obj modelo PokemonApiModel
                 var json_S = JsonConvert.DeserializeObject<PokemonApiModel>(respString);
+
+                //pasar objlist a listview
+                ListPoke.ItemsSource = json_S.Results;
 
             }
             return true;

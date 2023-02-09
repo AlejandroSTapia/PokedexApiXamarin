@@ -17,6 +17,7 @@
                             
                             <Grid Padding="10">
                                 <Grid.RowDefinitions>
+                                    
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
@@ -24,18 +25,18 @@
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Image Grid.RowSpan="2"
-                                       Source="{Binding ImageUrl}"
-                                       Aspect="AspectFill"
-                                       HeightRequest="60"
-                                       WidthRequest="60" />
+                                
                                 <Label Grid.Column="1"
                                        Text="{Binding Name}"
                                        FontAttributes="Bold" />
-                                <Label Grid.Row="1"
-                                       Grid.Column="1"
-                                       Text="{Binding Location}"
-                                       VerticalOptions="End" />
+                                
+                                <Image Grid.RowSpan="2"
+                                       Source="{Binding Url}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="60"
+                                       WidthRequest="60" />
+                               
+                                
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
